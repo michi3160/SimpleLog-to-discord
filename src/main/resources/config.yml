@@ -1,0 +1,69 @@
+# === SimpleLog to Discord Configuration v5.0 ===
+
+bot-token: "YOUR_BOT_TOKEN_HERE"
+
+# --- Channel IDs ---
+channels:
+  server-status: ""
+  join-left: ""
+  chat: ""
+  command: ""
+  death: ""
+  warn: "" # For server console WARN messages
+
+# --- Discord to Minecraft Bridge Settings ---
+bridge-discord-to-minecraft: true # Set to false to disable messages from Discord showing in-game.
+
+# --- Security Settings ---
+# VERY IMPORTANT: To use the /console command from Discord, you MUST set this to a role ID.
+# Only members with this role will be able to execute console commands.
+# To get a Role ID, right-click the role in Server Settings -> Roles and "Copy Role ID".
+discord-admin-role-id: ""
+
+# --- Embed Designs ---
+# A timestamp [HH:mm:ss] will be automatically added to the beginning of titles or descriptions.
+embeds:
+  server-start:
+    enabled: true
+    color: "#2ECC71"
+    title: "Server Status"
+    description: "The server has started."
+  server-stop:
+    enabled: true
+    color: "#E74C3C"
+    title: "Server Status"
+    description: "The server has stopped."
+  player-join:
+    enabled: true
+    color: "#3498DB"
+    description: "**%player%** joined the server."
+  player-left:
+    enabled: true
+    color: "#95A5A6"
+    description: "**%player%** left the server."
+  chat:
+    enabled: true
+    color: "#ECF0F1"
+    author: "%player%"
+    description: "%message%"
+  command:
+    enabled: true
+    color: "#F1C40F"
+    author: "%player% executed a command"
+    description: "```%command%```"
+  gamemode-change:
+    enabled: true
+    color: "#9B59B6"
+    author: "Game Mode Changed"
+    description: "`%player%`'s game mode has been set to **%gamemode%**."
+  death:
+    enabled: true
+    color: "#E74C3C"
+    author: "Player Death"
+    title: "%player% died."
+    description: "**Reason:** %reason%\n**Location:** `%coordinates%`"
+  warn:
+    enabled: true
+    color: "#E67E22"
+    title: "Server Warning"
+    description: "```%message%```"

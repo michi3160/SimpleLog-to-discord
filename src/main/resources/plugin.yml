@@ -1,0 +1,16 @@
+name: SimpleLogToDiscord
+version: '4.0.0-EN'
+main: com.yourdomain.simplelogtodiscord.SimpleLogToDiscord
+api-version: '1.21'
+author: YourName
+description: Sends server events to Discord using embeds.
+commands:
+  simplelogtodiscord:
+    description: Reloads the configuration.
+    usage: /<command> reload
+    aliases: [sltd]
+    permission: simplelogtodiscord.reload
+permissions:
+  simplelogtodiscord.reload:
+    description: Allows reloading the configuration.
+    default: op
